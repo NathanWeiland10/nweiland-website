@@ -1,0 +1,69 @@
+<p-divider id="experience"></p-divider>
+
+<div class="timeline-view">
+  <div class="container">
+    <h2>Work Experience</h2>
+    <p-timeline [value]="workExperience" align="alternate" class="timeline-container">
+      <ng-template pTemplate="content" let-experience>
+        <p-card header="{{experience.position}}"
+                subheader="{{experience.startDate}} - {{experience.endDate}}" class="m-2 border-card">
+          <p-panel header="Read More" [toggleable]="true" toggler="header" [collapsed]="true">
+
+            <picture>
+              <source media="(min-width:820px)" srcset="./assets/images/{{experience.iconXl}}">
+              <source media="(min-width:650px)" srcset="./assets/images/{{experience.iconLg}}">
+              <source media="(min-width:465px)" srcset="./assets/images/{{experience.iconMd}}">
+              <img fetchpriority="low" src="./assets/images/{{experience.iconSm}}" alt="{{experience.company}}">
+            </picture>
+            <p>(Photo Credit: {{experience.photoCreditName}})</p>
+
+            <p><strong>Company:</strong> {{experience.company}}</p>
+            <p><strong>Location:</strong> {{experience.location}}</p>
+            <div *ngIf="experience.website" >
+              <p><strong>Website: </strong><a href="{{experience.website}}" tabindex="-1">{{experience.website}}</a></p>
+            </div>
+            <p><strong>Overview:</strong></p>
+            <ul *ngFor="let duty of experience.overview">
+              <li>
+                {{duty}}
+              </li>
+            </ul>
+          </p-panel>
+        </p-card>
+      </ng-template>
+    </p-timeline>
+  </div>
+</div>
+
+<div class="list-view">
+  <div class="container">
+    <h2>Work Experience</h2>
+    <div *ngFor="let experience of workExperience">
+      <p-card header="{{experience.position}}"
+              subheader="{{experience.startDate}} - {{experience.endDate}}" class="m-2 border-card">
+        <p-panel header="Read More" [toggleable]="true" toggler="header" [collapsed]="true">
+
+          <picture>
+            <source media="(min-width:820px)" srcset="./assets/images/{{experience.iconXl}}">
+            <source media="(min-width:650px)" srcset="./assets/images/{{experience.iconLg}}">
+            <source media="(min-width:465px)" srcset="./assets/images/{{experience.iconMd}}">
+            <img fetchpriority="low" src="./assets/images/{{experience.iconSm}}" alt="{{experience.company}}">
+          </picture>
+          <p>(Photo Credit: {{experience.photoCreditName}})</p>
+
+          <p><strong>Company:</strong> {{experience.company}}</p>
+          <p><strong>Location:</strong> {{experience.location}}</p>
+          <div *ngIf="experience.website">
+            <p><strong>Website: </strong><a href="{{experience.website}}" tabindex="-1">{{experience.website}}</a></p>
+          </div>
+          <p><strong>Overview:</strong></p>
+          <ul *ngFor="let duty of experience.overview">
+            <li>
+              {{duty}}
+            </li>
+          </ul>
+        </p-panel>
+      </p-card>
+    </div>
+  </div>
+</div>

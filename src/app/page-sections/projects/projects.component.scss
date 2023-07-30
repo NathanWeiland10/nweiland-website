@@ -1,0 +1,45 @@
+h2 {
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 2rem;
+}
+
+img {
+  min-width: 60%;
+  max-width: 60%;
+  height: auto;
+}
+
+p {
+  margin-top: 0;
+}
+
+.content-container {
+  margin-top: 1rem;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.link-margin {
+  margin-top: 1rem;
+}
+
+::ng-deep .border-card .p-card {
+  border-radius: 15px;
+  border: 6px solid var(--primary-color);
+}
+
+::ng-deep .content-container .p-button {
+  background-color: #8d3ca4;
+  border: 6px solid #8d3ca4;
+}
+
+::ng-deep .p-link {
+  font-size: 0;
+  box-shadow: 0 0 0 0 !important;
+}

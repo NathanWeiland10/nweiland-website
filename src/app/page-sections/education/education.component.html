@@ -1,0 +1,67 @@
+<p-divider id="education"></p-divider>
+
+<div class="timeline-view">
+  <div class="container">
+    <h2>Education</h2>
+    <p-timeline [value]="education" align="alternate" class="timeline-container">
+      <ng-template pTemplate="content" let-school>
+        <p-card header="{{school.name}}" subheader="{{school.startDate}} - {{school.endDate}}"
+                class="font-bold m-2 border-card">
+          <p-panel header="Read More" [toggleable]="true" toggler="header" [collapsed]="true">
+
+            <picture>
+              <source media="(min-width:820px)" srcset="./assets/images/{{school.iconXl}}">
+              <source media="(min-width:650px)" srcset="./assets/images/{{school.iconLg}}">
+              <source media="(min-width:465px)" srcset="./assets/images/{{school.iconMd}}">
+              <img fetchpriority="low" src="./assets/images/{{school.iconSm}}" alt="{{school.name}}">
+            </picture>
+
+            <p>(Photo Credit: {{school.photoCreditName}})</p>
+            <p><strong>Degree:</strong> {{school.degree}}</p>
+            <p><strong>Location:</strong> {{school.location}}</p>
+            <p><strong>GPA:</strong> {{school.GPA}}</p>
+
+            <p><strong>Activities:</strong></p>
+            <ul *ngFor="let act of school.activities">
+              <li>
+                {{act}}
+              </li>
+            </ul>
+          </p-panel>
+        </p-card>
+      </ng-template>
+    </p-timeline>
+  </div>
+</div>
+
+<div class="list-view">
+  <div class="container">
+    <h2>Education</h2>
+    <div *ngFor="let school of education">
+      <p-card header="{{school.name}}" subheader="{{school.startDate}} - {{school.endDate}}"
+              class="font-bold m-2 border-card">
+        <p-panel header="Read More" [toggleable]="true" toggler="header" [collapsed]="true">
+
+          <picture>
+            <source media="(min-width:820px)" srcset="./assets/images/{{school.iconXl}}">
+            <source media="(min-width:650px)" srcset="./assets/images/{{school.iconLg}}">
+            <source media="(min-width:465px)" srcset="./assets/images/{{school.iconMd}}">
+            <img fetchpriority="low" src="./assets/images/{{school.iconSm}}" alt="{{school.name}}">
+          </picture>
+
+          <p>(Photo Credit: {{school.photoCreditName}})</p>
+          <p><strong>Degree:</strong> {{school.degree}}</p>
+          <p><strong>Location:</strong> {{school.location}}</p>
+          <p><strong>GPA:</strong> {{school.GPA}}</p>
+
+          <p><strong>Activities:</strong></p>
+          <ul *ngFor="let act of school.activities">
+            <li>
+              {{act}}
+            </li>
+          </ul>
+        </p-panel>
+      </p-card>
+    </div>
+  </div>
+</div>

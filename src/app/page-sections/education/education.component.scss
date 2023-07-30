@@ -1,0 +1,89 @@
+.container {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.timeline-container {
+  display: flex;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.colored-button {
+  color: #CA87D4;
+}
+
+p,
+ul {
+  text-align: left;
+}
+
+a {
+  word-break: break-all;
+}
+
+::ng-deep .content ul {
+  list-style-type: circle !important;
+  margin: .5rem 0 .5rem 0;
+}
+
+li {
+  margin-bottom: 0;
+}
+
+strong {
+  color: #f1b2ff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+::ng-deep .p-card {
+  text-align: center;
+}
+
+::ng-deep p-panel {
+  min-width: 100% !important;
+}
+
+::ng-deep .p-panel .p-panel-header {
+  transition: 0.3s;
+}
+
+::ng-deep .p-panel .p-panel-header:hover {
+  background-color: #25364d;
+  font-size: 1.1rem;
+}
+
+::ng-deep .p-panel .p-panel-toggler {
+  pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  .list-view {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  ::ng-deep .p-card {
+    margin-bottom: 2rem;
+  }
+
+  .timeline-view {
+    display: none;
+  }
+}
+
+@media (min-width: 1001px) {
+  .list-view {
+    display: none;
+  }
+
+  .timeline-view {
+    display: block;
+  }
+}
