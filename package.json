@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "nathanweiland.com",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docs": "ng build --output-path docs",
+    "pages": "ng build --base-href ./ --output-path docs",
     "map": "ng build --source-map",
     "explore": "source-map-explorer dist/**/*.js"
   },
