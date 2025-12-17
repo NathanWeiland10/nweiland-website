@@ -1,11 +1,29 @@
 import {Experience} from './interface/experience';
 
 export const WORK_EXPERIENCE: Experience[] = [
+    {
+    company: "JAG Consulting",
+    position: "Data Scientist / ML Researcher",
+    startDate: "July 2024",
+    endDate: "Present",
+    overview: [
+      'Creating and comparing machine learning models using wearable device data',
+      'Creating custom large language models (LLMs) for human performance analysis',
+      'Working with business intelligence and analysis software, such as Power BI and Microsoft Fabric'
+    ],
+    location: 'Pensacola, FL',
+    website: 'https://jaghp.com/',
+    photoCreditName: 'JAG Consulting',
+    iconSm: "jag-sm.jpg",
+    iconMd: "jag-md.jpg",
+    iconLg: "jag-lg.jpg",
+    iconXl: "jag-xl.jpg"
+  },
   {
     company: "Winsupply",
     position: "Fullstack Developer Intern",
     startDate: "May 2023",
-    endDate: "Present",
+    endDate: "December 2023",
     overview: [
       'Working with front-end technologies such as Angular and TypeScript',
       'Working with back-end technologies such as Spring Boot',
@@ -24,7 +42,7 @@ export const WORK_EXPERIENCE: Experience[] = [
     company: "Wright State University",
     position: "Lab Leader / Teaching Assistant",
     startDate: "August 2021",
-    endDate: "Present",
+    endDate: "April 2024",
     overview: [
       'Conducting lab sessions and answering questions',
       'Evaluating and submitting feedback for assignments',
