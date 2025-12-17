@@ -4,7 +4,7 @@ export const EDUCATION: Education[] = [
   {
     name: 'Wright State University (Graduate)',
     startDate: 'Spring 2023',
-    endDate: 'Present',
+    endDate: 'December 2025',
     activities: [
       'Teaching Assistant / Lab Leader',
       'Student Ambassador',
