@@ -10,7 +10,7 @@ export const PROJECT_LIST: Project[] = [
   },
   {
     title: "Java Quest",
-    description: "Completed during my first year of college in the Spring of 2021 and was the winner of a game jam that was held against five other student projects. Encounter various types of enemies and level up your character in this text based adventure game!",
+    description: "Completed during my first year of college in the Spring of 2021 and was the winner of a game jam that was held against five other student projects. Encounter various types of enemies and level up your character in this text based adventure game! (Not recommended for mobile devices)",
     projectType: "Java (Java Swing)",
     gitHubLink: "https://github.com/NathanWeiland10/JavaQuest/tree/main",
     playOverWebLink: "https://nathanweiland10.github.io/JavaQuest-WebBuild/",
