@@ -8,6 +8,12 @@
                 class="flex align-items-center justify-content-center font-bold m-2 border-card">
           <div class="card-content">
             <p>{{project.description}}</p>
+            
+            <!-- Conditional Warning for Java Quest -->
+            <p *ngIf="project.title === 'Java Quest'">
+              <b>(Not recommended for mobile devices)</b>
+            </p>
+
             <div class="content-container">
               <img ngSrc="./assets/images/{{project.projectCover}}" width="512" height="512" alt="Project cover"
                    priority>
